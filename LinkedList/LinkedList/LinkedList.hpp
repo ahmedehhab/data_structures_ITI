@@ -24,11 +24,17 @@ class LinkedList{
   void removeNode(T data);
   void removeAll(T data);
   bool isEmpty();
+  Node<T> * getHead();
   T operator[](int index);
   ~LinkedList();
 
 
 };
+template<typename T>
+Node<T>* LinkedList<T>::getHead(){
+  return head;
+}
+
 template<typename T>
 bool LinkedList<T>::isEmpty(){
   if(head==nullptr)return true;
