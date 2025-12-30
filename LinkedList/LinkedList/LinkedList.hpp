@@ -23,6 +23,7 @@ class LinkedList{
   int getCount();
   void removeNode(T data);
   void removeAll(T data);
+  void setHead(Node<T> * n);
   bool isEmpty();
   Node<T> * getHead();
   T operator[](int index);
@@ -30,6 +31,11 @@ class LinkedList{
 
 
 };
+template <typename T>
+void  LinkedList<T>::setHead(Node<T> * n){
+   head=n;
+}
+
 template<typename T>
 Node<T>* LinkedList<T>::getHead(){
   return head;
